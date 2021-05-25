@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Text;
+using UnityEngine;
 
 /// <summary>
 /// This class is used to generate the FizzBuzz solution for a given range.
@@ -14,40 +15,41 @@ public class FizzBuzz : MonoBehaviour
     /// </summary>
     /// <param name="init">Start number for the range.</param>
     /// <param name="end">End number for the range.</param>
-    /// <returns></returns>
+    /// <returns>Concatenated string with the result</returns>
     public string GetFizzBuzz(int init, int end)
     {
         if (init > end)
             return "The initial value cannot be greater than the end value.";
 
-        string fizzBuzzResult = "";
+        StringBuilder fizzBuzzResult = new StringBuilder();
 
         for (int i = init; i <= end; i++)
         {
             //Divisible by 3 and 5 at the same time
             if (IsDivisible(i, 15))
             {
-                fizzBuzzResult += "FizzBuzz";
+                
+                fizzBuzzResult.Append("FizzBuzz");
             }
             else
             {
                 if (IsDivisible(i, 3))
-                    fizzBuzzResult += "Fizz";
+                    fizzBuzzResult.Append("Fizz");
                 else if (IsDivisible(i, 5))
-                    fizzBuzzResult += "Buzz";
+                    fizzBuzzResult.Append("Buzz");
                 else
-                    fizzBuzzResult += i.ToString();;
+                    fizzBuzzResult.Append(i.ToString());;
             }
             
             //Adding a line break if it has not reach the end
             if(i != end)
-                fizzBuzzResult += "\n";
+                fizzBuzzResult.Append("\n");
         }
         
         //Printing to standard console output
         Debug.Log(fizzBuzzResult);
         
-        return fizzBuzzResult;
+        return fizzBuzzResult.ToString();
     }
 
     /// <summary>
