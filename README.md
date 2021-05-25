@@ -1,6 +1,8 @@
 # FizzBuzz unity project
 
-Write a program that prints the numbers from 1 to 100 or from a user defined range. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+Unity implementation of the classic FizzBuzz test with editable range and unit tests:
+
+"Write a program that prints the numbers from 1 to 100 or from a user defined range. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz"."
 
 ## User interface
 

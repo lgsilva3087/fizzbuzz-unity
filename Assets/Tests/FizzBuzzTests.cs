@@ -1,12 +1,14 @@
-﻿using System.Collections;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /// <summary>
+    /// Test suite for the main FizzBuzz functions
+    /// </summary>
     public class FizzBuzzTests
     {
+        ///<summary>Instance of FizzBuzz class</summary>
         private FizzBuzz _fizzBuzz;
         
         /// <summary>
